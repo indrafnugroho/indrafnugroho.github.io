@@ -5,6 +5,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 3rem 0 0 0;
     font-family: 'Poppins', sans-serif;
@@ -42,6 +46,18 @@ img {
     text-align: center;
 }
 
+.section-title::after {
+    position: absolute;
+    content: "";
+    width: 64px;
+    height: 0.18rem;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: 2rem;
+    background-color: var(--first-color);
+}
+
 .section {
     padding-top: 3rem;
     padding-bottom: 2rem;
@@ -67,7 +83,7 @@ img {
     box-shadow: 0 1px 4px rgba(146,161,176,.15);
 }
   
-.nav{
+.nav {
     height: 3rem;
     display: flex;
     justify-content: space-between;
@@ -75,7 +91,7 @@ img {
     font-weight: 600;
 }
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 768px) {
     .nav__menu {
         position: fixed;
         top: 3rem;
@@ -83,7 +99,7 @@ img {
         width: 80%;
         height: 100%;
         padding: 2rem;
-        background-color: #ffff;
+        background-color: #0d0d0e;
         transition: .5s;
     }
 }
@@ -97,6 +113,20 @@ img {
     color: #fff;
 }
 
+.nav__link:hover {
+    position: relative;
+}
+
+.nav__link:hover::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 0.18rem;
+    left: 0;
+    top: 2rem;
+    background-color: #fff;
+}
+
 .nav__logo {
     color: #ffff;
 }
@@ -106,10 +136,24 @@ img {
     font-size: 1.5rem;
     cursor: pointer;
 }
-  
+
+.active::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 0.18rem;
+    left: 0;
+    top: 2rem;
+    background-color: var(--first-color);
+}
+
+.show {
+    right: 0;
+}
+
 .home {
     height: calc(100vh - 3rem);
-    /* row-gap: 1rem; */
+    row-gap: 1rem;
 }
 
 .home__data {
@@ -147,6 +191,11 @@ img {
     padding: .75rem 2.5rem;
     font-weight: 600;
     border-radius: .5rem;
+}
+
+.button:hover {
+    background-color: #fff;
+    color: #101111;
 }
 
 .about__container {
@@ -231,6 +280,7 @@ img {
     }
 
     .home__social {
+        padding-top: 0;
         padding-bottom: 2.5rem;
         flex-direction: row;
         align-self: flex-end;
@@ -243,11 +293,6 @@ img {
 
     #twitter {
         margin-right: 0;
-    }
-
-    .home__img {
-        width: 457px;
-        bottom: 15%;
     }
   
     .about__container {
