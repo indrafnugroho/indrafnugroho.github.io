@@ -8,12 +8,18 @@
 body {
     margin: 3rem 0 0 0;
     font-family: 'Poppins', sans-serif;
-    font-size: 0.938rem;
+    font-size: 1rem;
     background-color: #3a3a3a;
     color: #ffff;
 }
 
+h1, h2, p {
+    margin: 0;
+}
+
 ul {
+    margin: 0;
+    padding: 0;
     list-style: none;
 }
 
@@ -40,8 +46,7 @@ img {
     padding-top: 3rem;
     padding-bottom: 2rem;
 }
-  
-/*===== LAYOUT =====*/
+
 .bd-grid {
     max-width: 1024px;
     display: grid;
@@ -62,7 +67,6 @@ img {
     box-shadow: 0 1px 4px rgba(146,161,176,.15);
 }
   
-  /*===== NAV =====*/
 .nav{
     height: 3rem;
     display: flex;
@@ -70,6 +74,7 @@ img {
     align-items: center;
     font-weight: 600;
 }
+
 @media screen and (max-width: 768px){
     .nav__menu {
         position: fixed;
@@ -92,20 +97,6 @@ img {
     color: #fff;
 }
 
-.nav__link:hover {
-    position: relative;
-}
-
-.nav__link:hover::after {
-    position: absolute;
-    content: "";
-    width: 100%;
-    height: 0.18rem;
-    left: 0;
-    top: 2rem;
-    background-color: #ffff;
-}
-
 .nav__logo {
     color: #ffff;
 }
@@ -116,24 +107,25 @@ img {
     cursor: pointer;
 }
   
-/*===== HOME =====*/
 .home {
     height: calc(100vh - 3rem);
-    row-gap: 1rem;
+    /* row-gap: 1rem; */
 }
 
 .home__data {
-    /* align-self: center; */
+    align-self: center;
     text-align: center;
 }
 
 .home__title {
-    font-size: 2rem;
+    font-size: 3.5rem;
     margin-bottom: 2.5rem;
     text-align: center;
 }
 
 .home__social {
+    display: inline;
+    flex-direction: row;
     text-align: center;
 }
 
@@ -147,8 +139,7 @@ img {
 .home__social-icon:hover {
     color: #1b1b1b;
 }
-  
-/*BUTTONS*/
+
 .button {
     display: inline-block;
     background-color: #101111;
@@ -157,12 +148,12 @@ img {
     font-weight: 600;
     border-radius: .5rem;
 }
-  
-/* ===== ABOUT =====*/
+
 .about__container {
     row-gap: 2rem;
     text-align: center;
 }
+
 .about__subtitle {
     margin-bottom: 1rem;
 }
@@ -176,21 +167,19 @@ img {
     border-radius: 2rem;
 }
 
-/* ===== FOOTER =====*/
 .footer {
     background-color: #0d0d0e;
     color: #fff;
     text-align: center;
     font-weight: 600;
-    padding: 2rem 0;
+    padding: 1rem 0;
 }
 
 .footer__title {
-    font-size: 2rem;
-    margin-bottom: 2rem;
+    font-size: 1rem;
+    margin-bottom: 1rem;
 }
-  
-/* ===== MEDIA QUERIES=====*/
+
 @media screen and (min-width: 768px){
     body {
         margin: 0;
@@ -203,11 +192,6 @@ img {
 
     .section-title {
         margin-bottom: 3rem;
-    }
-
-    .section-title::after {
-        width: 80px;
-        top: 3rem;
     }
   
     .nav {
@@ -241,7 +225,6 @@ img {
     }
 
     .home__social {
-        padding-top: 0;
         padding-bottom: 2.5rem;
         flex-direction: row;
         align-self: flex-end;
@@ -250,6 +233,10 @@ img {
     .home__social-icon {
         margin-bottom: 0;
         margin-right: 2rem;
+    }
+
+    #twitter {
+        margin-right: 0;
     }
 
     .home__img {
