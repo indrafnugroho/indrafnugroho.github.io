@@ -7,62 +7,67 @@
         <!-- link to css -->
         <link rel="stylesheet" href="css/style.css">
 
-        <!-- box icons -->
+        <!-- social media and toggle icons -->
         <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
 
         <title>Indra&apos;s Profile Page</title>
     </head>
     <body>
         <!-- header -->
-        <header class="l-header">
+        <header class="header">
             <nav class="nav bd-grid">
+                <!-- home button -->
                 <div>
-                    <a href="#" class="nav__logo">Home</a>
+                    <a href="#" class="nav_home">Home</a>
                 </div>
 
-                <div class="nav__menu" id="nav-menu">
+                <!-- nav button -->
+                <div class="nav_menu" id="nav-menu">
                     <ul class="nav_list">
-                        <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+                        <li class="nav_item"><a href="#about" class="nav_link">About</a></li>
                     </ul>
                 </div>
 
-                <div class="nav__toggle" id="nav-toggle">
+                <!-- toggle for <= 768px device -->
+                <div class="nav_toggle" id="nav-toggle">
                     <i class='bx bx-menu'></i>
                 </div>
             </nav>
         </header>
 
-        <main class="l-main">
+        <main class="main">
             <!-- home -->
             <section class="home bd-grid" id="home">
-                <div class="home__data">
-                    <h1 class="home__title">Greetings!<br>Welcome to my profile page<br>Get in touch with me &#128071;</h1>
-                    <a href="mailto:indrafbrngrh@gmail.com" target="_blank" class="button">Email</a>
+                <div class="home_content">
+                    <h1 class="home_title">Greetings!<br>Welcome to my profile page<br>Get in touch with me &#128071;&#127995;</h1>
                 </div>
 
-                <div class="home__social">
-                    <a href="https://linkedin.com/in/indrafnugroho" target="_blank" class="home__social-icon"><i class="bx bxl-linkedin"></i></a>
-                    <a href="https://github.com/indrafnugroho" target="_blank" class="home__social-icon"><i class="bx bxl-github"></i></a>
-                    <a href="https://instagram.com/indrafnugroho" target="_blank" class="home__social-icon"><i class="bx bxl-instagram"></i></a>
-                    <a href="https://twitter.com/indrafnugroho" target="_blank" class="home__social-icon" id="twitter"><i class="bx bxl-twitter"></i></a>
+                <div class="home_social">
+                    <a href="mailto:indrafbrngrh@gmail.com" target="_blank" class="home_social-icon"><i class="bx bx-envelope-open"></i></a>
+                    <a href="https://linkedin.com/in/indrafnugroho" target="_blank" class="home_social-icon"><i class="bx bxl-linkedin"></i></a>
+                    <a href="https://github.com/indrafnugroho" target="_blank" class="home_social-icon"><i class="bx bxl-github"></i></a>
+                    <a href="https://instagram.com/indrafnugroho" target="_blank" class="home_social-icon"><i class="bx bxl-instagram"></i></a>
+                    <a href="https://twitter.com/indrafnugroho" target="_blank" class="home_social-icon" id="twitter"><i class="bx bxl-twitter"></i></a>
                 </div>
             </section>
 
             <!-- about -->
-            <section class="about section" id="about">
+            <section class="about" id="about">
                 <h2 class="section-title">About</h2>
 
-                <div class="about__container bd-grid">
-                    <div class="about__img">
+                <div class="about_container bd-grid">
+                    <div class="about_img">
                         <img src="img/img2.jpg" alt="">
                     </div>
 
                     <div>
-                        <h2 class="about__subtitle">Indra Febrio Nugroho</h2>
-                        <p class="about__text">
-                            Hi, you can call me Indra. Currently, I am studying at Institut Teknologi Bandung as Informatics undergraduate.
-                            I am actively participating in HMIF ITB, Kabinet KM ITB, MWA WM ITB team, and PSM-ITB.
-                            I am also selected as Database Laboratory Assistant at Informatics study program. I am deeply interested in data analysis.
+                        <h2 class="about_subtitle">Indra Febrio Nugroho</h2>
+                        <p class="about_text">
+                            Hi, you can call me Indra.<br>
+                            Currently, I am studying at Institut&nbsp;Teknologi&nbsp;Bandung as Informatics&nbsp;undergraduate.<br>
+                            I am actively participating in HMIF&nbsp;ITB, Kabinet&nbsp;KM&nbsp;ITB, MWA&nbsp;WM&nbsp;ITB&nbsp;team, and PSM-ITB.<br>
+                            I am also selected as Database&nbsp;Laboratory&nbsp;Assistant at Informatics&nbsp;study&nbsp;program.<br>
+                            I am deeply interested in data&nbsp;analysis.
                         </p>
                     </div>
                 </div>
@@ -71,11 +76,10 @@
         
         <!-- footer -->
         <footer class="footer">
-            <p class="footer__title">Profile Page</p>
             <p>&copy; 2020 copyright all rights reserved</p>
         </footer>
 
-        <!-- link to js -->
+        <!-- link to javascript -->
         <script src="js/main.js"></script>
     </body>
 </html>

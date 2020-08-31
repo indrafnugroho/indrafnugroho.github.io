@@ -46,23 +46,6 @@ img {
     text-align: center;
 }
 
-.section-title::after {
-    position: absolute;
-    content: "";
-    width: 64px;
-    height: 0.18rem;
-    left: 0;
-    right: 0;
-    margin: auto;
-    top: 2rem;
-    background-color: var(--first-color);
-}
-
-.section {
-    padding-top: 3rem;
-    padding-bottom: 2rem;
-}
-
 .bd-grid {
     max-width: 1024px;
     display: grid;
@@ -73,7 +56,7 @@ img {
     margin-right: 1rem;
 }
 
-.l-header {
+.header {
     width: 100%;
     position: fixed;
     top: 0;
@@ -91,8 +74,13 @@ img {
     font-weight: 600;
 }
 
+.about {
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+}
+
 @media screen and (max-width: 768px) {
-    .nav__menu {
+    .nav_menu {
         position: fixed;
         top: 3rem;
         right: -100%;
@@ -104,20 +92,20 @@ img {
     }
 }
 
-.nav__item {
+.nav_item {
     margin-bottom: 2rem;
 }
 
-.nav__link {
+.nav_link {
     position: relative;
     color: #fff;
 }
 
-.nav__link:hover {
+.nav_link:hover {
     position: relative;
 }
 
-.nav__link:hover::after {
+.nav_link:hover::after {
     position: absolute;
     content: "";
     width: 100%;
@@ -127,24 +115,14 @@ img {
     background-color: #fff;
 }
 
-.nav__logo {
+.nav_home {
     color: #ffff;
 }
 
-.nav__toggle {
+.nav_toggle {
     color: #ffff;
     font-size: 1.5rem;
     cursor: pointer;
-}
-
-.active::after {
-    position: absolute;
-    content: "";
-    width: 100%;
-    height: 0.18rem;
-    left: 0;
-    top: 2rem;
-    background-color: var(--first-color);
 }
 
 .show {
@@ -156,62 +134,48 @@ img {
     row-gap: 1rem;
 }
 
-.home__data {
+.home_content {
     align-self: center;
     text-align: center;
 }
 
-.home__title {
+.home_title {
     font-size: 2rem;
     margin-bottom: 2.5rem;
     text-align: center;
 }
 
-.home__social {
+.home_social {
     display: inline;
     flex-direction: row;
     text-align: center;
 }
 
-.home__social-icon {
+.home_social-icon {
     width: max-content;
     margin-bottom: 1rem;
-    font-size: 1.5rem;
+    font-size: 3rem;
     color: #ffff;
 }
 
-.home__social-icon:hover {
+.home_social-icon:hover {
     color: #1b1b1b;
 }
 
-.button {
-    display: inline-block;
-    background-color: #101111;
-    color: #fff;
-    padding: .75rem 2.5rem;
-    font-weight: 600;
-    border-radius: .5rem;
-}
-
-.button:hover {
-    background-color: #fff;
-    color: #101111;
-}
-
-.about__container {
+.about_container {
     row-gap: 2rem;
     text-align: center;
 }
 
-.about__subtitle {
+.about_subtitle {
     margin-bottom: 1rem;
 }
 
-.about__img {
+.about_img {
     justify-self: center;
 }
 
-.about__img img {
+.about_img img {
     width: 200px;
     border-radius: 2rem;
 }
@@ -224,20 +188,10 @@ img {
     padding: 1rem 0;
 }
 
-.footer__title {
-    font-size: 1rem;
-    margin-bottom: 1rem;
-}
-
 @media screen and (min-width: 768px){
     body {
         margin: 0;
         font-size: 1rem;
-    }
-
-    .section {
-        padding-top: 4rem;
-        padding-bottom: 3rem;
     }
 
     .section-title {
@@ -249,21 +203,21 @@ img {
         height: calc(3rem + 1rem);
     }
 
-    .nav__list {
+    .nav_list {
         display: flex;
         padding-top: 0;
     }
 
-    .nav__item {
+    .nav_item {
         margin-left: 3rem;
         margin-bottom: 0;
     }
 
-    .nav__toggle {
+    .nav_toggle {
         display: none;
     }
 
-    .nav__link  {
+    .nav_link  {
         color: #ffff;
     }
   
@@ -271,22 +225,22 @@ img {
         height: 100vh;
     }
 
-    .home__title {
+    .home_title {
         font-size: 3.5rem;
     }
 
-    .home__data {
+    .home_content {
         align-self: flex-end;
     }
 
-    .home__social {
+    .home_social {
         padding-top: 0;
         padding-bottom: 2.5rem;
         flex-direction: row;
         align-self: flex-end;
     }
 
-    .home__social-icon {
+    .home_social-icon {
         margin-bottom: 0;
         margin-right: 2rem;
     }
@@ -294,14 +248,19 @@ img {
     #twitter {
         margin-right: 0;
     }
-  
-    .about__container {
+
+    .about {
+        padding-top: 4rem;
+        padding-bottom: 3rem;
+    }
+
+    .about_container {
         grid-template-columns: repeat(2,1fr);
         align-items: center;
         text-align: initial;
     }
 
-    .about__img img {
+    .about_img img {
         width: 300px;
     }
 }
@@ -310,9 +269,5 @@ img {
     .bd-grid {
         margin-left: auto;
         margin-right: auto;
-    }
-
-    .home__img {
-        right: 10%;
     }
 }

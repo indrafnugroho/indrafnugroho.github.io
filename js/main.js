@@ -1,7 +1,7 @@
 // show menu
-const showMenu = (toggleId, navId) => {
-    const toggle = document.getElementById(toggleId),
-    nav = document.getElementById(navId)
+const showMenu = (toggleID, navID) => {
+    const toggle = document.getElementById(toggleID),
+    nav = document.getElementById(navID)
 
     if (toggle && nav) {
         toggle.addEventListener('click', ()=> {
@@ -12,7 +12,7 @@ const showMenu = (toggleId, navId) => {
 showMenu('nav-toggle','nav-menu')
 
 // remove menu
-const navLink = document.querySelectorAll('.nav__link');   
+const navLink = document.querySelectorAll('.nav_link');   
 
 function linkAction(){
     const navMenu = document.getElementById('nav-menu')
